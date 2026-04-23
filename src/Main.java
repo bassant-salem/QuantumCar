@@ -5,10 +5,10 @@ public class Main {
         Car car = CarFactory.createCar(EngineType.HYBRID);
 
         car.start();
-        car.accelerate(); // 20 → electric
-        car.accelerate(); // 40 → electric
-        car.accelerate(); // 60 → switch to gas
-        car.brake();      // 40 → switch to electric
+        car.accelerate();
+        car.accelerate();
+        car.accelerate();
+        car.brake();
 
         System.out.println("Change Engine");
 

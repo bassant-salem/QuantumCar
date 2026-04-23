@@ -13,14 +13,14 @@ public class HybridEngine implements Engine {
 
     public void setSpeed(int speed) {
 
-        // Switch from electric → gas
+
         if (speed > 50 && this.speed <= 50) {
             gasEngine.start();
             electricEngine.stop();
             operatingEngine = gasEngine;
         }
 
-        // Switch from gas to electric
+
         else if (speed <= 50 && this.speed > 50) {
             electricEngine.start();
             gasEngine.stop();
