@@ -9,7 +9,7 @@ public class Main {
         car.accelerate();
         car.accelerate();
 
-        System.out.println("---- Change Engine ----");
+        System.out.println("Change Engine");
 
         car.setEngine(EngineType.GAS);
 
