@@ -3,8 +3,39 @@ public class Car {
     private Engine engine;
     private int speed = 0;
 
-    public void setEngine(Engine engine) {
-        this.engine = engine;
+    public static Car createCar(EngineType type) {
+        Car car = new Car();
+
+        switch (type) {
+            case GAS:
+                car.engine = new GasEngine();
+                break;
+            case ELECTRIC:
+                car.engine = new ElectricEngine();
+                break;
+            case HYBRID:
+                car.engine = new HybridEngine();
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid type");
+        }
+
+        return car;
+    }
+
+
+    public void setEngine(EngineType type) {
+        switch (type) {
+            case GAS:
+                this.engine = new GasEngine();
+                break;
+            case ELECTRIC:
+                this.engine = new ElectricEngine();
+                break;
+            case HYBRID:
+                this.engine = new HybridEngine();
+                break;
+        }
     }
 
     public void start() {
